@@ -10,7 +10,7 @@ namespace PickRandomCards
             string[] pickedCards = new string[numberOfCards];
             for (int i = 0; i < numberOfCards; i++)
             {
-                pickedCards[i] = RandomValue() + " of  " + RandomSuit();
+                pickedCards[i] = RandomSuit()+RandomValue();
             }
             return pickedCards;
         }
@@ -21,16 +21,16 @@ namespace PickRandomCards
             int value = random.Next(1, 14);
 
             /// 如果它是 1，回傳 Ace
-            if (value == 1) return "Ace";
+            if (value == 1) return "A";
 
             /// 如果它是 1，回傳 Jack
-            if (value == 11) return "Jack";
+            if (value == 11) return "J";
 
             /// 如果它是 1，回傳 Queen
-            if (value == 12) return "Queen";
+            if (value == 12) return "Q";
 
             /// 如果它是 1，回傳 King
-            if (value == 13) return "King";
+            if (value == 13) return "K";
 
             /// 如果還沒有回傳，回傳 value
             return value.ToString();
@@ -42,16 +42,16 @@ namespace PickRandomCards
             int value = random.Next(1, 5);
 
             /// 如果它是 1，回傳 Spades
-            if (value == 1) return "Spades";
+            if (value == 1) return "♠️";
 
             /// 如果它是 2，回傳 Hearts
-            if (value == 2) return "Hearts";
+            if (value == 2) return "♥️";
 
             /// 如果它是 3，回傳 Clubs
-            if (value == 3) return "Clubs";
+            if (value == 3) return "♣️";
 
             /// 如果還沒有回傳，回傳字串 Diamons
-            return "Diamons";
+            return "♦️";
         }
     }
 }

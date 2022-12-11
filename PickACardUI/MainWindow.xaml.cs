@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PickRandomCards;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,12 @@ namespace PickACardUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            string[] pickedCards = CardPicker.PickSomeCards((int)numberOfCards.Value);
+            listOfCards.Items.Clear();
+            foreach (string card in pickedCards)
+            {
+                listOfCards.Items.Add(card);
+            }
         }
     }
 }
