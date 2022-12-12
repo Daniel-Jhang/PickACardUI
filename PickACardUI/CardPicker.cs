@@ -5,6 +5,11 @@ namespace PickRandomCards
     public class CardPicker
     {
         static Random random = new Random();
+        /// <summary>
+        /// 抽出一些撲克牌並回傳它們。
+        /// </summary>
+        /// <param name="numberOfCards">要抽出幾張牌</param>
+        /// <returns>存有撲克牌名稱的字串陣列。<>
         public static string[] PickSomeCards(int numberOfCards)
         {
             string[] pickedCards = new string[numberOfCards];
